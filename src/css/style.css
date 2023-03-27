@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+background-image: url(../img/background.gif);
+background-repeat: no-repeat;
+background-position: center;
+background-size: 100%;
+background-attachment: fixed;
+background-repeat: repeat;
+font-family: 'Press Start 2P', cursive;
+
+}
+
+.banner-enviroment{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    
+    color: #000000;
+}
+
+.game-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+}
+
+.score{
+    color: yellow;
+    position: absolute;
+}
+
+.game{
+    width: 500px;
+    height: 200px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 20px;
+}
+
+.personagem{
+    width: 30px;
+    height: 50px ;
+    background-image: url(../img/doom-doom-guy.gif);
+    background-position: center;
+    background-size: 25px;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 150px;
+}
+
+.animar{
+ animation: personagem 500ms infinite;
+}
+
+@keyframes personagem{
+    0%{
+        top: 150px;
+    }
+    30%{ top: 100px}
+    70%{ top: 100px}
+    100%{ top: 150px}
+}
+
+.quadrado{
+    width: 20px;
+    height: 20px;
+   background-image: url(../img/inimigo.png);
+   background-position: center;
+   background-size: 25px;
+    position: relative;
+    top: 130px;
+    left: 480px;
+    animation: quadrado 1s infinite linear;
+}
+
+.text-enemie{
+    background-color: #fff;
+    font-size: 10px;
+    position: relative;
+    top: -20px;
+    width: 140px;
+    border-radius: 20px;
+}
+
+@keyframes quadrado{
+    0%{
+        left: 480px;
+    }
+    100%{ left: -40px}
+}
+
+@media screen and (min-width: 443px) {
+    
+    .game{
+        width: 500px;
+        height: 200px;
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 20px;
+        background: url(../img/background.gif);
+        
+    }
+}
